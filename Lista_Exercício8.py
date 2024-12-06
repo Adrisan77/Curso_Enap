@@ -55,3 +55,7 @@ x = st.checkbox('Sim')
 y = st.checkbox('Não')
 st.write(x)
 st.write(y)
+
+st.subheader("Botão")
+if st.button('Clique'):
+    st.write('Botão clicado!')
