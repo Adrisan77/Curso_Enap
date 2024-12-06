@@ -45,3 +45,11 @@ st.text("A nota para o atendimento é " + str(nota))
 #st.text(f'A nota para o atendimento é de {nota}')
 
 st.divider()
+#Questão 4:
+st.title("Questão 4")
+
+st.header("Interagir com a aplicação")
+
+st.subheader("Caixa de seleção")
+x = st.checkbox('Sim')
+st.write(x)
