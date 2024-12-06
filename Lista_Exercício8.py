@@ -67,3 +67,7 @@ st.write(f'Você escolheu: {genero}')
 st.subheader("Seleção múltipla em uma lista")
 deptos = st.multiselect('Escolha um departamento', ['DCS', 'DE', 'DIR'])
 st.write('Você escolheu:', deptos)
+
+st.subheader("Seleção de uma lista, mas usando o slider como seletor")
+resposta = st.select_slider('Selecione uma resposta', ['Ruim', 'Bom', 'Excelente'])
+st.write(f'Você selecionou: {resposta}')
