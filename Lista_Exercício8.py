@@ -10,14 +10,6 @@ st.title("Questão 2")
 #Eu amo a documentação da página oficial do streamlit, eles trazem vários exemplos e aplicações com imagens:
 #https://docs.streamlit.io/develop/api-reference/write-magic/st.write
 
-st.divider()
-#Questão 2:
-st.title("Questão 2")
-
-#Aqui vamos usar as formatações de texto padrões do streamlit
-#Eu amo a documentação da página oficial do streamlit, eles trazem vários exemplos e aplicações com imagens:
-#https://docs.streamlit.io/develop/api-reference/write-magic/st.write
-
 #Título
 st.title("Este é o título do app")
 
