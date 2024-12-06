@@ -42,6 +42,6 @@ nota = st.slider('Selecione uma nota', min_value = 0, max_value = 100)
 st.text("A nota para o atendimento é " + str(nota))
 
 #Outra opção:
-#st.text(f'A nota para o atendimento é {nota}')
+#st.text(f'A nota para o atendimento é de {nota}')
 
 st.divider()
