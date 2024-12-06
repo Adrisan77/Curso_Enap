@@ -63,3 +63,7 @@ if st.button('Clique'):
 st.subheader("Seleção única em uma lista suspensa")
 genero = st.selectbox('Selecione seu gênero', ['Masculino', 'Feminino'])
 st.write(f'Você escolheu: {genero}')
+
+st.subheader("Seleção múltipla em uma lista")
+deptos = st.multiselect('Escolha um departamento', ['DCS', 'DE', 'DIR'])
+st.write('Você escolheu:', deptos)
