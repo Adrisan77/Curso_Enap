@@ -34,3 +34,14 @@ st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 st.divider()
 #Questão 3:
 st.title("Questão 3")
+
+st.write("Slider: ")
+#Usamos min_value como o valor mínimo do nosso seletor e max_value como valor máximo do seletor
+
+nota = st.slider('Selecione uma nota', min_value = 0, max_value = 100) 
+st.text("A nota para o atendimento é " + str(nota))
+
+#Outra opção:
+#st.text(f'A nota para o atendimento é {nota}')
+
+st.divider()
