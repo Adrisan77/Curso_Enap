@@ -52,4 +52,6 @@ st.header("Interagir com a aplicação")
 
 st.subheader("Caixa de seleção")
 x = st.checkbox('Sim')
+y = st.checkbox('Não')
 st.write(x)
+st.write(y)
