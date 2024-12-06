@@ -35,7 +35,7 @@ st.divider()
 #Questão 3:
 st.title("Questão 3")
 
-st.write("Slider: ")
+st.write("Slider: 0 a 100 ")
 #Usamos min_value como o valor mínimo do nosso seletor e max_value como valor máximo do seletor
 
 nota = st.slider('Selecione uma nota', min_value = 0, max_value = 100) 
