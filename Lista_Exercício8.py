@@ -120,3 +120,15 @@ st.subheader("Mensagem informativa")
 st.info("Esta é uma informação")
 
 st.divider()
+#Questão 5:
+st.title("Questão 5")
+
+import streamlit as st
+#como vamos trabalhar coma dataframe, precisamos importar a biblioteca pandas
+import pandas as pd
+
+#1º) vamos criar o dataframe
+df = pd.DataFrame({
+    'nomeServidor': ['Adriana', 'Monica', 'Samara'],
+    'salario': [1200,300,5000]
+})
