@@ -59,3 +59,7 @@ st.write(y)
 st.subheader("Botão")
 if st.button('Clique'):
     st.write('Botão clicado!')
+
+st.subheader("Seleção única em uma lista suspensa")
+genero = st.selectbox('Selecione seu gênero', ['Masculino', 'Feminino'])
+st.write(f'Você escolheu: {genero}')
