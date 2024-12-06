@@ -132,3 +132,7 @@ df = pd.DataFrame({
     'nomeServidor': ['Adriana', 'Monica', 'Samara'],
     'salario': [1200,300,5000]
 })
+
+#2º) exibir a tabela com a base de dados
+st.header("Base de dados")
+st.write(df)
