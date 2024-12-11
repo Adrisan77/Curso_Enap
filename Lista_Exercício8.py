@@ -31,6 +31,9 @@ st.code("x=2021")
 #E ainda podemos usar latex!
 st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
+numero = st.slider('Selecione um número', 0, 10)
+st.write(f'Você selecionou: {numero}')
+
 st.divider()
 #Questão 3:
 st.title("Questão 3")
