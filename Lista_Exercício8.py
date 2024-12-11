@@ -34,6 +34,9 @@ st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 numero = st.slider('Selecione um número', 0, 10)
 st.write(f'Você selecionou: {numero}')
 
+numero = st.slider('Selecione um número', min_value = 1980, max_value= 2024)
+st.text("Seu número é " + str(numero))
+
 st.divider()
 #Questão 3:
 st.title("Questão 3")
