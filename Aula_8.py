@@ -152,3 +152,7 @@ opcao = st.selectbox(
 
 #5) inserir texto com o resultado da seleção
 st.write('Você selecionou: ', opcao)
+
+#6) 
+dadosFiltrados = df[df['nomeServidor'] == opcao]
+st.write(dadosFiltrados)
