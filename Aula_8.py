@@ -129,16 +129,17 @@ st.divider()
 #Questão 5:
 st.title("Questão 5")
 
+#1) importar as bibliotecas
 import streamlit as st
 #como vamos trabalhar coma dataframe, precisamos importar a biblioteca pandas
 import pandas as pd
 
-#1º) vamos criar o dataframe
+#2) criar o dataframe
 df = pd.DataFrame({
     'nomeServidor': ['Adriana', 'Monica', 'Samara'],
     'salario': [1200,300,5000]
 })
 
-#2º) exibir a tabela com a base de dados
+#3) exibir o título e a tabela com a base de dados
 st.header("Base de dados")
 st.write(df)
