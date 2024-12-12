@@ -155,7 +155,7 @@ selecao = st.selectbox(
 # Adicionar uma opção em branco no início da lista
 opcoes = [''] + list(df['nomeServidor'])
 
-opcao = st.selectbox(
+selecao1 = st.selectbox(
     'Qual servidor você gostaria de selecionar?',
     opcoes
 )
