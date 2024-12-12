@@ -4,8 +4,8 @@ import pandas as pd
 
 st.title("Questão 1")
 st.write("Sou servidor público")
-st.divider()
 
+st.divider()
 #2) criar o dataframe
 #criando o dataframe (o datafame possui duas colunas: nomeServidor e salario)
 #veja que o dataframe é um dicionário de listas
