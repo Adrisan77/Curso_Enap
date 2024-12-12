@@ -153,6 +153,6 @@ opcao = st.selectbox(
 #5) inserir texto com o resultado da seleção
 st.write('Você selecionou: ', opcao)
 
-#6) 
+#6) criar novo dataframe exibindo apenas o que for selecionado na caixa de seleção
 dadosFiltrados = df[df['nomeServidor'] == opcao]
 st.write(dadosFiltrados)
