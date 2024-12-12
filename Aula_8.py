@@ -143,3 +143,9 @@ df = pd.DataFrame({
 #3) exibir o título e a tabela com a base de dados
 st.header("Base de dados")
 st.write(df)
+
+#4) criar a caixa de seleção com o nome das servidores
+#utilizando o selectbox precisamos passar os dados: texto que o usuário irá se orientar e a indicar o coluna da tabela que ele terá que selecionar
+opcao = st.selectbox(
+    'Qual servidor você gostaria de selecionar?',
+     df['nomeServidor'])
