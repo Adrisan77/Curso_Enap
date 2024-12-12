@@ -39,3 +39,14 @@ st.write('Você selecionou: ', opcao)
 #7) criar novo dataframe exibindo apenas o que for selecionado na caixa de seleção
 dadosFiltrados = df[df['nomeServidor'] == opcao]
 st.write(dadosFiltrados)
+
+#importar as bibliotecas
+import streamlit as st
+import pandas as pd
+
+#inserir o número da questão
+st.title("Questão 2")
+st.divider()
+
+#criar o titulo para o dashboard
+st.title('Localização das comunidades quilombolas (2022)')
