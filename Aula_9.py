@@ -21,7 +21,7 @@ st.write(df)
 #4) criar a caixa de seleção com o nome das servidores
 #utilizando o selectbox precisamos passar os dados: texto que o usuário irá se orientar e a indicar o coluna da tabela que ele terá que selecionar
 #criamos uma nova variável (opcao) para armazenar o dado selecionado, assim podemos filtrar os dados com base na variável armazenada
-selecao = st.selectbox(
+opcao = st.selectbox(
     'Qual servidor você gostaria de selecionar?',
      df['nomeServidor'])
 
@@ -29,10 +29,9 @@ selecao = st.selectbox(
 # Adicionar uma opção em branco no início da lista
 opcoes = [''] + list(df['nomeServidor'])
 
-selecao = st.selectbox(
+opcao = st.selectbox(
     'Qual servidor você gostaria de selecionar?',
-    opcoes
-)
+    opcoes)
 
 #5) inserir texto com o resultado da seleção
 st.write('Você selecionou: ', opcao)
