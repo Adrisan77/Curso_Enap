@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 st.title("Questão 1")
-st.subtitle("Sou servidor público")
+st.header("Sou servidor público")
 st.divider()
 
 #2) criar o dataframe
