@@ -12,8 +12,7 @@ import pandas as pd
 #veja que o dataframe é um dicionário de listas
 df = pd.DataFrame({
     'nomeServidor': ['Adriana', 'Monica', 'Samara'],
-    'salario': [1200,300,5000]
-})
+    'salario': [1200,300,5000]})
 
 #3)exibir o título e a tabela com a base de dados
 st.header("Base de dados")
@@ -30,7 +29,7 @@ selecao = st.selectbox(
 # Adicionar uma opção em branco no início da lista
 opcoes = [''] + list(df['nomeServidor'])
 
-selecao1 = st.selectbox(
+selecao = st.selectbox(
     'Qual servidor você gostaria de selecionar?',
     opcoes
 )
