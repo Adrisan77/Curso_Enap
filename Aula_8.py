@@ -157,8 +157,7 @@ opcoes = [''] + list(df['nomeServidor'])
 
 opcao = st.selectbox(
     'Qual servidor você gostaria de selecionar?',
-    opcoes
-)
+    opcoes)
 
 #5) inserir texto com o resultado da seleção
 st.write('Você selecionou: ', opcao)
