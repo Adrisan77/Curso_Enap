@@ -50,3 +50,7 @@ st.divider()
 
 #criar o titulo para o dashboard
 st.title('Localização das comunidades quilombolas (2022)')
+
+#carregar os dados
+df = pd.read_csv('/content/BR_LQs_CD2022.csv')
+df
