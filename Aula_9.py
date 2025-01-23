@@ -52,5 +52,5 @@ st.header("Localização das comunidades quilombolas (2022)")
 st.divider()
 
 #carregar os dados
-df = pd.read_csv('/content/BR_LQs_CD2022.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv')
 df
