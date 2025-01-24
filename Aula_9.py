@@ -121,3 +121,7 @@ fig = px.bar(
 
 # Exibindo o gráfico no Streamlit
 st.plotly_chart(fig)
+
+#exibir os 10 municípios com mais comunidades usando o bar_chart
+st.header('Os dez municípios com mais comunidades quilombolas - usando o bar_chart')
+st.bar_chart(df['NM_MUNIC'].value_counts()[:10])
