@@ -82,3 +82,6 @@ dadosFiltrados = df[df['NM_UF'] == estadoFiltro]
 #inserir checkbox para marcar "Mostrar tabela"
 if st.checkbox('Mostrar tabela') ==True:
   st.write(dadosFiltrados)
+
+#criar o mapa a partir dos dados filtrados
+st.map(dadosFiltrados, latitude="Lat_d", longitude="Long_d")
