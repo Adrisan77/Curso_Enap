@@ -85,3 +85,12 @@ if st.checkbox('Mostrar tabela') ==True:
 
 #criar o mapa a partir dos dados filtrados
 st.map(dadosFiltrados, latitude="Lat_d", longitude="Long_d")
+
+#exibir a quantidade de municípios no Estado selecionado usando a função len(), que mede a quantidade de linhas de um dataframe
+#usamos o "unique", que informa quantas ocorrências únicas existe em uma coluna
+
+qtdeMunicipios = len(df['NM_MUNIC'].unique())
+st.write("A quantidade de municípios com localização quilombola é " + str(qtdeMunicipios))
+
+qtdeComunidades = len(df['NM_AGLOM'].unique())
+st.write("A quantidade de comunidades quilombolas é " + str(qtdeComunidades))
