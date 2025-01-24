@@ -117,7 +117,7 @@ fig = px.bar(
     y='count',
     title='Distribuição por Unidade Federativa',
     labels={'NM_UF': 'Unidade Federativa', 'count': 'Número de Registros'},
-    text='count'  # Exibir os valores em cada barra)
+    text='count')  # Exibir os valores em cada barra)
 
 # Exibindo o gráfico no Streamlit
 st.plotly_chart(fig)
