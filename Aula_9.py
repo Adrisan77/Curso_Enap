@@ -98,3 +98,26 @@ st.write("A quantidade de comunidades quilombolas é " + str(qtdeComunidades))
 #Usando a função nativa do streamlit para fazer bar_chart
 st.header("Número de comunidades por UF - usando o bar-chart")
 st.bar_chart(df['NM_UF'].value_counts())
+
+#ou podemos fazer usando o plotly
+#a função nativa bar_chart tem um problema com a ordenação das informações. Usando o plotly resolvemos este problema
+st.header('Número de comunidades por UF - usando o plotly')
+# Contagem de valores por UF
+df_contagem = df['NM_UF'].value_counts().reset_index()
+#usamos o "reset_index" porque quando criamos a base de dados com o "value_counts", o Python considera que a NM_UF não é uma simples coluna, mas sim o "index" do DataFrame
+#quando usamos o reset_index(), nós fazemos com que NM_UF vire uma coluna como outra qualquer.
+
+#ATENÇÃO: Não podemos esquecer de importar o plotly e incluir no requirements
+
+import plotly.express as px
+# Criando o gráfico com Plotly
+fig = px.bar(
+    df_contagem,
+    x='NM_UF',
+    y='count',
+    title='Distribuição por Unidade Federativa',
+    labels={'NM_UF': 'Unidade Federativa', 'count': 'Número de Registros'},
+    text='count'  # Exibir os valores em cada barra)
+
+# Exibindo o gráfico no Streamlit
+st.plotly_chart(fig)
