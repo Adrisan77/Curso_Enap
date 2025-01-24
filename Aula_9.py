@@ -79,3 +79,7 @@ st.write('Você selecionou: ', estadoFiltro)
 #criar um novo dataframe que mostre apenas os dados do estado selecionado
 dadosFiltrados = df[df['NM_UF'] == estadoFiltro]
 st.write(dadosFiltrados)
+
+#inserir checkbox para marcar "Mostrar tabela"
+if st.checkbox('Mostrar tabela') ==True:
+  st.write(dadosFiltrados)
