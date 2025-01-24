@@ -94,3 +94,7 @@ st.write("A quantidade de municípios com localização quilombola é " + str(qt
 
 qtdeComunidades = len(dadosFiltrados['NM_AGLOM'].unique())
 st.write("A quantidade de comunidades quilombolas é " + str(qtdeComunidades))
+
+#Usando a função nativa do streamlit para fazer bar_chart
+st.header("Número de comunidades por UF")
+st.bar_chart(df['NM_UF'].value_counts())
