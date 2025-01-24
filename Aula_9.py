@@ -125,3 +125,25 @@ st.plotly_chart(fig)
 #exibir os 10 municípios com mais comunidades usando o bar_chart
 st.header('Os dez municípios com mais comunidades quilombolas - usando o bar_chart')
 st.bar_chart(df['NM_MUNIC'].value_counts()[:10])
+
+#ou podemos exibir usando o plotly
+st.header('Os dez municípios com mais comunidades quilombolas - usando o plotly')
+# Contagem de valores por UF
+df_contagem_municipios = df['NM_MUNIC'].value_counts()[:10].reset_index()
+#usamos o "reset_index" porque quando criamos a base de dados com o "value_counts", o Python considera que a NM_UF não é uma simples coluna, mas sim o "index" do DataFrame
+#quando usamos o "reset_index()"", nós fazemos com que "NM_UF" vire uma coluna como outra qualquer!
+
+#ATENÇÃO: Não podemos esquecer de importar o plotly
+
+import plotly.express as px
+# criando o gráfico com Plotly
+fig_municipios = px.bar(
+    df_contagem_municipios,
+    x='NM_MUNIC',
+    y='count',
+    title='Distribuição por Unidade Federativa',
+    labels={'NM_MUNIC': 'Unidade Federativa', 'count': 'Número de Registros'},
+    text='count') # Exibir os valores em cada barra
+
+# exibindo o gráfico no Streamlit
+st.plotly_chart(fig_municipios)
