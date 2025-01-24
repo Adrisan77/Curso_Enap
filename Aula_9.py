@@ -53,22 +53,14 @@ st.divider()
 
 #carregar os dados
 df = pd.read_csv('https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv')
-df
-
-#visualizar as características das variáveis
-df.info()
 
 #retirar o Unnamed
 df.drop(columns=['Unnamed: 0'], inplace=True)
-df
 
 #converter as colunas Lat_d e Long_d para valores numéricos
 list= ['Lat_d', 'Long_d']
 df[list] = df[list].apply(pd.to_numeric, errors='coerce')
 df.info()
-
-#visualizar o conteúdo do dataframe
-df
 
 #criar o selectbox com os Estados
 #para criar o selectbox precisamos primeiro criar um dataframe com o lista dos Estados
