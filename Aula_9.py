@@ -68,7 +68,10 @@ df.info()
 #para não repetir os nomes, inserimos a função "unique"
 estados = df['NM_UF'].unique()
 
-#criar dataframe para armazenar o estado selecionado e criar o selectbox
-dadosFiltrados = st.selectbox(
+#criar uma variável para armazenar o estado selecionado a partir do selectbox
+estadoFiltro = st.selectbox(
     'Qual estado selecionar?',
      estados)
+
+#mostrar o dado selecionado
+st.write('Você selecionou: ', estadoFiltro)
