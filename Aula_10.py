@@ -74,7 +74,7 @@ opcoes = df_total_agregado['UF'].unique()
 
 estados_selecionados = st.multiselect("Selecione os estados que deseja visualizar:", opcoes, default=opcoes[:3])
 
-#NOVIDADE: como estamos usando mais de um estado, não usamos o ==, mas a função .isin
+#NOVIDADE: como estamos usando mais de um estado, não usamos o ==, mas a função ".isin"
 
 df_filtrado = df_total_agregado[df_total_agregado['UF'].isin(estados_selecionados)]
 
