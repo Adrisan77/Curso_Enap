@@ -28,7 +28,7 @@ df_total = pd.concat([df_mulheres, df_homens])
 
 #titulo para base de dados completa
 st.title("Base de Dados")
-st.header("Base de Dados Completa")
+st.header("Base de dados completa")
 st.write(df_total)
 
 #agregando os dados por UF e Sexo
