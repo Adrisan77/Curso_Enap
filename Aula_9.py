@@ -149,7 +149,7 @@ fig_municipios = px.bar(
 st.plotly_chart(fig_municipios)
 
 #primeiro passo passo: implementar um slider para que o usuário escolha quantas linhas ele quer visualizar no DataFrame
-numero_de_linhas = st.slider('Quantas linhas você deseja exibir?', min_value = 0, max_value = 100) 
+numero_de_linhas = st.slider('Selecione a quantidade de linhas que você deseja exibir?', min_value = 0, max_value = 100) 
 #Em min_value o valor mínimo que o usuário pode escolher e max_value o valor máximo que o usuário pode escolher
 #aprendemos que o comando df.head() pode receber como parâmetro a quantidade de linhas a serem exibidas
 #aplicamos no df.head: df.head(numero_de_linhas).
