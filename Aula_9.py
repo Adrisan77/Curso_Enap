@@ -102,6 +102,9 @@ st.bar_chart(df['NM_UF'].value_counts())
 ##ordenando os 10 maiores valores por ordem alfabética
 st.bar_chart(df['NM_UF'].value_counts().sort_values(ascending=False)[:10])
 
+#ordenando o gráfico por ordem decrescente
+st.bar_chart(df['NM_UF'].value_counts().sort_values(ascending=False))
+
 #ou podemos fazer usando o plotly
 #a função nativa bar_chart tem um problema com a ordenação das informações. Usando o plotly resolvemos este problema
 st.header('Número de comunidades por UF - usando o plotly')
