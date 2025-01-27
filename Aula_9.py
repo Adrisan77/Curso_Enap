@@ -99,7 +99,7 @@ st.write("A quantidade de comunidades quilombolas é " + str(qtdeComunidades))
 st.header("Número de comunidades por UF - usando o bar-chart")
 st.bar_chart(df['NM_UF'].value_counts())
 
-#ordenando os valores do gráfico
+##ordenando os 10 maiores valores por ordem alfabética
 st.bar_chart(df['NM_UF'].value_counts().sort_values(ascending=False)[:10])
 
 #ou podemos fazer usando o plotly
