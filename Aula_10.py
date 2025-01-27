@@ -33,8 +33,7 @@ st.write(df_total)
 
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
-df_total_agregado = df_total_agregado.rename(columns={'siglaUf': 'UF',
-                                                      'id': 'Contagem'})
+df_total_agregado = df_total_agregado.rename(columns={'siglaUf': 'UF','id': 'Contagem'})
 
 #Título para base de dados por Estado e Sexo
 st.header("Base de dados agregada por Estado e por Sexo")
@@ -48,8 +47,7 @@ fig_barras = px.bar(
     color='Sexo',
     labels={'UF': 'Unidade Federativa', 'Contagem': 'Quantidade'},
     barmode='group', #Gráfico de barras
-    title='Quantidade de Deputados por UF e Sexo (barras)'
-)
+    title='Quantidade de Deputados por UF e Sexo (barras)')
 
 fig_barras_empilhadas = px.bar(
     df_total_agregado,
@@ -58,8 +56,7 @@ fig_barras_empilhadas = px.bar(
     color='Sexo',
     labels={'UF': 'Unidade Federativa', 'Contagem': 'Quantidade'},
     barmode='stack', #Gráfico de barras empilhadas
-    title='Quantidade de Deputados por UF e Sexo (barras empilhadas)'
-)
+    title='Quantidade de Deputados por UF e Sexo (barras empilhadas)')
 
 #Exibindo o gráfico no Streamlit
 st.title("Exibições gráficas")
@@ -89,7 +86,6 @@ fig_barras_apos_selecao = px.bar(
     color='Sexo',
     labels={'UF': 'Unidade Federativa', 'Contagem': 'Quantidade'},
     barmode='group', 
-    title=f'Quantidade de Deputados por Sexo nos Estados {estados_selecionados}' #Aqui colocamos o estado_selecionado como um parâmetro, que é o definido na caixa de seleção
-)
+    title=f'Quantidade de Deputados por Sexo nos Estados {estados_selecionados}' #Aqui colocamos o estado_selecionado como um parâmetro, que é o definido na caixa de seleção)
 
 st.plotly_chart(fig_barras_apos_selecao)
