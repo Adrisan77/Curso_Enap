@@ -75,10 +75,7 @@ st.title("Utilizando o select box para que o usuário possa escolher um determin
 opcoes = df_total_agregado['UF'].unique()
 
 estados_selecionados = st.multiselect(
-    "Selecione os estados que deseja visualizar:",  #Mensagem de texto
-    opcoes,  #Lista de opções com os estados únicos
-    default=opcoes[:3]  #Define os 3 primeiros estados como padrão
-)
+    "Selecione os estados que deseja visualizar:", opcoes, default=opcoes[:3])
 
 #Depois filtramos os dados pelos estados selecionados
 #NOVIDADE: como estamos usando mais de um estado, não usamos o ==, mas a função .isin
