@@ -40,7 +40,7 @@ df_total_agregado = df_total_agregado.rename(columns={'siglaUf': 'UF',
 st.header("Base de dados agregada por Estado e por Sexo")
 st.write(df_total_agregado)
 
-#criando gráfico de barras empilhadas
+#criando gráfico de barras
 fig_barras = px.bar(
     df_total_agregado,
     x='UF',
@@ -60,3 +60,42 @@ fig_barras_empilhadas = px.bar(
     barmode='stack', #Gráfico de barras empilhadas
     title='Quantidade de Deputados por UF e Sexo (barras empilhadas)'
 )
+
+#Exibindo o gráfico no Streamlit
+st.title("Exibições gráficas")
+st.header("Gráfico de barras")
+st.plotly_chart(fig_barras)
+st.plotly_chart(fig_barras_empilhadas)
+
+st.title("Utilizando o select box para que o usuário possa escolher um determinado Estado")
+
+#Selectbox para seleção do estado
+#Primeiro fazemos a lista de opções. O unique() é utilizado para mostrar as ocorrências únicas de uma determinada coluna.
+
+opcoes = df_total_agregado['UF'].unique()
+
+estados_selecionados = st.multiselect(
+    "Selecione os estados que deseja visualizar:",  #Mensagem de texto
+    opcoes,  #Lista de opções com os estados únicos
+    default=opcoes[:3]  #Define os 3 primeiros estados como padrão
+)
+
+#Depois filtramos os dados pelos estados selecionados
+#NOVIDADE: como estamos usando mais de um estado, não usamos o ==, mas a função .isin
+#O Estado da coluna "UF" isin (está na) lista de estados_selecionados?
+#Se sim, então ele é escolhido.
+
+df_filtrado = df_total_agregado[df_total_agregado['UF'].isin(estados_selecionados)]
+
+#Agora criamos o gráfico de barras empilhadas
+fig_barras_apos_selecao = px.bar(
+    df_filtrado,
+    x='UF',
+    y='Contagem',
+    color='Sexo',
+    labels={'UF': 'Unidade Federativa', 'Contagem': 'Quantidade'},
+    barmode='group', 
+    title=f'Quantidade de Deputados por Sexo nos Estados {estados_selecionados}' #Aqui colocamos o estado_selecionado como um parâmetro, que é o definido na caixa de seleção
+)
+
+st.plotly_chart(fig_barras_apos_selecao)
