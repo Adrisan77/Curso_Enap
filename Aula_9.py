@@ -164,5 +164,6 @@ numero_de_linhas = st.slider('Selecione a quantidade de linhas que você deseja 
 st.write(df.head(numero_de_linhas))
 
 #visualizar dados sobre a quantidade de municípios e comunidades
+st.header('Quantidade de municípios e comunidades quilombolas')
 st.metric('# Municípios', len(df['NM_MUNIC'].unique()))
 st.metric('# Comunidades', len(df['NM_AGLOM'].unique()))
