@@ -25,6 +25,6 @@ Unindo as bases de dados
 df_total = pd.concat([df_mulheres, df_homens])
 
 Criando o Dashboard
-st.title("Base de Dados)
+st.title("Base de Dados")
 st.header("Base de Dados Completa")
 st.write(df_total)
