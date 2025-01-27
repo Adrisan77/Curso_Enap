@@ -86,6 +86,7 @@ fig_barras_apos_selecao = px.bar(
     color='Sexo',
     labels={'UF': 'Unidade Federativa', 'Contagem': 'Quantidade'},
     barmode='group', 
-    title=f'Quantidade de Deputados por Sexo nos Estados {estados_selecionados}' #Aqui colocamos o estado_selecionado como um parâmetro, que é o definido na caixa de seleção)
+    title=f'Quantidade de Deputados por Sexo nos Estados {estados_selecionados}')
+    #Aqui colocamos o estado_selecionado como um parâmetro, que é o definido na caixa de seleção
 
 st.plotly_chart(fig_barras_apos_selecao)
