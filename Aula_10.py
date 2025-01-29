@@ -31,6 +31,10 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
+st.header('Contagem de deputados por estado')
+contagem = df_total['siglaUf'].value_counts()
+st.write(contagem)
+
 #Titulo para base de dados filtrada
 st.header("Base de dados - filtro por sexo")
 
