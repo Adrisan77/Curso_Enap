@@ -46,7 +46,7 @@ st.write(df_filtrado)
 opcao_estado = st.selectbox('Selecione o estado', df_filtrado['siglaUf'].unique())
 
 #mostrar o dataframe com o filtro selecionado
-df_filtrado_estado = df_filtrado[df_total['siglaUf'] == opcao_estado]
+df_filtrado_estado = df_filtrado['siglaUf'] == opcao_estado]
 st.header('Deputados do estado' + opcao_estado)
 st.write(df_filtrado_estado)
 
