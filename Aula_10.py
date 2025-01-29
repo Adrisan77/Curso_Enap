@@ -31,10 +31,6 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
-Numero_total = len(df_total)
-Numero_total
-st.write(Numero_total)
-
 #Titulo para base de dados filtrada
 st.header("Base de dados - filtro por sexo")
 
