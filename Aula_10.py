@@ -31,6 +31,7 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
+#Mostar o número total
 st.header("Total de deputados")
 st.write(len(df_total))
 
@@ -50,6 +51,10 @@ df_filtrado_sexo = df_total[df_total['Sexo'] == opcao_sexo]
 st.header('Deputados do sexo' + opcao_sexo)
 st.write(df_filtrado_sexo)
 
+#Mostar o número a partir da base filtrada
+st.header("Total de deputados")
+st.write(len(df_filtrado_sexo))
+
 #mostrar contagem geral de deputados por sexo
 st.header('Contagem de deputados por sexo')
 contagem_sexo = df_filtrado_sexo['siglaUf'].value_counts()
@@ -62,6 +67,10 @@ opcao_estado = st.selectbox('Selecione o estado', df_filtrado_sexo['siglaUf'].un
 df_filtrado_estado = df_filtrado_sexo[df_filtrado_sexo['siglaUf'] == opcao_estado]
 st.header('Deputados do estado' + opcao_estado)
 st.write(df_filtrado_estado)
+
+#Mostar o número a partir da base filtrada
+st.header("Total de deputados")
+st.write(len(df_filtrado_estado))
 
 #mostrar contagem geral de deputados por estado
 st.header('Contagem de deputados no estado')
