@@ -47,7 +47,8 @@ df_filtrado_sexo = df_total[df_total['Sexo'] == opcao_sexo]
 st.header('Deputados do sexo' + opcao_sexo)
 st.write(df_filtrado_sexo)
 
-df_filtrado_sexo = df_filtrado_sexo['Sexo'].value_counts()
+#Mostrar contagem do dataframe filtrado
+contagem = df_filtrado_sexo[df_filtrado_sexo['Sexo'].value_counts()
 st.write(df_filtrado_sexo)
 
 #mostrar o dataframe por estado a partir do que foi filtrado por sexo
