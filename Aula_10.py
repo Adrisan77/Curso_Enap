@@ -47,7 +47,7 @@ df_filtrado_sexo = df_total[df_total['Sexo'] == opcao_sexo]
 st.header('Deputados do sexo' + opcao_sexo)
 st.write(df_filtrado_sexo)
 
-st.header('Contagem de deputados por sexo + opcao_sexo')
+st.header('Contagem de deputados por sexo')
 contagem_sexo = df_filtrado_sexo['siglaUf'].value_counts()
 st.write(contagem_sexo)
 
