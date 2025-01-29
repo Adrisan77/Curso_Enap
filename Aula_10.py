@@ -31,6 +31,7 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
+#Mostrar a contagem geral de deputados
 st.header('Contagem de deputados por estado')
 contagem = df_total['siglaUf'].value_counts()
 st.write(contagem)
@@ -53,10 +54,6 @@ opcao_estado = st.selectbox('Selecione o estado', df_filtrado_sexo['siglaUf'].un
 df_filtrado_estado = df_filtrado_sexo[df_filtrado_sexo['siglaUf'] == opcao_estado]
 st.header('Deputados do estado' + opcao_estado)
 st.write(df_filtrado_estado)
-
-st.header('Contagem de deputados por estado')
-contagem = df_filtrado_sexo['siglaUf'].value_counts()
-st.write(contagem)
 
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
