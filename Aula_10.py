@@ -39,7 +39,7 @@ opcao = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
 #mostrar o dataframe com o filtro selecionado
 df_filtrado = df_total[df_total['Sexo'] == opcao]
-st.header('Deputados do sexo" +opcao)
+st.header('Deputados do sexo' + opcao)
 st.write(df_filtrado)
 
 #Agregando os dados por UF e Sexo
