@@ -31,11 +31,8 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
-#Criando o selectbox para selecionar o sexo
-sexo = st.selectbox('Selecione o sexo', ['Feminino', 'Masculino'])
-
-#outra forma: criar o selectbox
-opcao = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
+criando o selectbox para selecionar o sexo
+sexo = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
