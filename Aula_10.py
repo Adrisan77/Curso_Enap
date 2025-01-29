@@ -32,7 +32,7 @@ st.header("Base de dados completa")
 st.write(df_total)
 
 #criando o selectbox para selecionar o sexo
-sexo = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
+opcao = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
 #mostrar o dataframe com o filtro selecionado
 df_filtrado = df_total[df_total['Sexo'] == opcao]
