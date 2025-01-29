@@ -31,6 +31,9 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
+#Titulo para base de dados filtrada
+st.header("Base de dados - Filtro por Sexo")
+
 #criando o selectbox para selecionar o sexo
 opcao = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
