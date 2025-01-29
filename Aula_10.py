@@ -31,6 +31,10 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
+Numero_deputados = len(df_total)
+Numero_deputados
+st.header('O número total de deputados é: {Numero_deputados}')
+
 #Titulo para base de dados filtrada
 st.header("Base de dados - filtro por sexo")
 
