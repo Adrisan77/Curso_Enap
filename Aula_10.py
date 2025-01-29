@@ -52,6 +52,7 @@ st.write(df_filtrado_estado)
 
 st.header('Contagem de deputados por estado')
 contagem = df_filtrado_sexo['siglaUf'].value_counts()
+st.write(contagem)
 
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
