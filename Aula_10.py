@@ -31,7 +31,7 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
-#Mostrar a contagem geral de deputados
+#Mostrar a contagem geral de deputados por estado
 st.header('Contagem de deputados por estado')
 contagem = df_total['siglaUf'].value_counts()
 st.write(contagem)
