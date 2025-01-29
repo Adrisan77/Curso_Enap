@@ -36,6 +36,7 @@ sexo = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
 #mostrar o dataframe com o filtro selecionado
 df_filtrado = df_total[df_total['Sexo'] == opcao]
+df_filtrado
 
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
