@@ -42,6 +42,9 @@ df_filtrado = df_total[df_total['Sexo'] == opcao]
 st.header('Deputados do sexo' + opcao)
 st.write(df_filtrado)
 
+#mostrar o dataframe por estado a partir do que foi filtrado por sexo
+opcao_estado = st.selectbox('Selecione o estado', df_filtrado['siglaUf'].unique())
+
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
 df_total_agregado = df_total_agregado.rename(columns={'siglaUf': 'UF','id': 'Contagem'})
