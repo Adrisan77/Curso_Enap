@@ -35,18 +35,18 @@ st.write(df_total)
 st.header("Base de dados - filtro por sexo")
 
 #criando o selectbox para selecionar o sexo
-opcao = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
+opcao_sexo = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
 #mostrar o dataframe com o filtro selecionado
-df_filtrado = df_total[df_total['Sexo'] == opcao]
+df_filtrado_sexo = df_total[df_total['Sexo'] == opcao_sexo]
 st.header('Deputados do sexo' + opcao)
-st.write(df_filtrado)
+st.write(df_filtrado_sexo)
 
 #mostrar o dataframe por estado a partir do que foi filtrado por sexo
-opcao_estado = st.selectbox('Selecione o estado', df_filtrado['siglaUf'].unique())
+opcao_estado = st.selectbox('Selecione o estado', df_filtrado_sexo['siglaUf'].unique())
 
 #mostrar o dataframe com o filtro selecionado
-df_filtrado_estado = df_filtrado[df_filtrado['siglaUf'] == opcao_estado]
+df_filtrado_estado = df_filtrado_sexo[df_filtrado_sexo['siglaUf'] == opcao_estado]
 st.header('Deputados do estado' + opcao_estado)
 st.write(df_filtrado_estado)
 
