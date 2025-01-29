@@ -32,14 +32,14 @@ st.header("Base de dados completa")
 st.write(df_total)
 
 #Titulo para base de dados filtrada
-st.header("Base de dados - Filtro por Sexo")
+st.header("Base de dados - filtro por sexo")
 
 #criando o selectbox para selecionar o sexo
 opcao = st.selectbox('Selecione o sexo', df_total['Sexo'].unique())
 
 #mostrar o dataframe com o filtro selecionado
 df_filtrado = df_total[df_total['Sexo'] == opcao]
-df_filtrado
+st.write(df_filtrado)
 
 #Agregando os dados por UF e Sexo
 df_total_agregado = df_total.groupby(['siglaUf', 'Sexo'])['id'].count().reset_index()
