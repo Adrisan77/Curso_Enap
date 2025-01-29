@@ -31,7 +31,7 @@ st.title("Base de Dados")
 st.header("Base de dados completa")
 st.write(df_total)
 
-#Criando o Selectbox para selecionar o sexo
+#Criando o selectbox para selecionar o sexo
 sexo = st.selectbox('Selecione o sexo', ['Feminino', 'Masculino'])
 
 #Agregando os dados por UF e Sexo
