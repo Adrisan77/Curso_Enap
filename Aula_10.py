@@ -47,7 +47,8 @@ df_filtrado_sexo = df_total[df_total['Sexo'] == opcao_sexo]
 st.header('Deputados do sexo' + opcao_sexo)
 st.write(df_filtrado_sexo)
 
-mostrar_contagem = st.checkbox('Mostrar contagem de deputados por estado')
+df_filtrado_sexo=df_filtrado_sexo['Sexo'].value_counts()
+st.write(df_filtrado_sexo)
 
 #mostrar o dataframe por estado a partir do que foi filtrado por sexo
 opcao_estado = st.selectbox('Selecione o estado', df_filtrado_sexo['siglaUf'].unique())
