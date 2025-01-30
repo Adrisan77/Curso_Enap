@@ -40,7 +40,7 @@ total_mulheres = df_mulheres['id'].count()
 st.metric('Total de mulheres', total_mulheres)
 
 #mostrar o total de homens
-total_mulheres = df_homens['id'].count()
+total_homens = df_homens['id'].count()
 st.metric('Total de homens', total_homens)
 
 #Mostrar a contagem geral de deputados por estado
