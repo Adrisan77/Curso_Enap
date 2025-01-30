@@ -35,6 +35,14 @@ st.write(df_total)
 st.header("Total de deputados")
 st.write(len(df_total))
 
+#mostrar o total de mulheres
+total_mulheres = df_mulheres['id'].count()
+st.metric('Total de mulheres', total_mulheres)
+
+#mostrar o total de homens
+total_mulheres = df_homens['id'].count()
+st.metric('Total de homens', total_homens)
+
 #Mostrar a contagem geral de deputados por estado
 st.header('Contagem de deputados por estado')
 contagem = df_total['siglaUf'].value_counts()
