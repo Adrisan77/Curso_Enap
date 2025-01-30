@@ -72,7 +72,7 @@ st.write(df_filtrado_estado)
 st.header("Total de deputados")
 st.write(len(df_filtrado_estado))
 
-#mostrar contagem geral de deputados por estado
+#mostrar contagem geral de deputados por estado a partir da base filtrada
 st.header('Contagem de deputados no estado')
 contagem_estado = df_filtrado_estado['Sexo'].value_counts()
 st.write(contagem_estado)
